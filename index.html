@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beulah | BCA Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#0f2027;
+  background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
+  color:#ffffff;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
+  padding:15px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
+
+nav h2{
+  color:#4ade80;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:#4ade80;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 10%;
+}
+
+.hero h1{
+  font-size:3.5rem;
+  animation:fadeDown 1.5s ease;
+}
+
+.hero span{
+  color:#4ade80;
+}
+
+.hero p{
+  margin-top:15px;
+  font-size:1.2rem;
+  opacity:0.9;
+  animation:fadeUp 1.5s ease;
+}
+
+.hero button{
+  margin-top:30px;
+  padding:14px 35px;
+  border:none;
+  border-radius:30px;
+  background:#4ade80;
+  color:#000;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  transform:scale(1.1);
+}
+
+/* SECTIONS */
+section{
+  padding:90px 10%;
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:45px;
+  font-size:2.4rem;
+  color:#4ade80;
+}
+
+/* ABOUT */
+.about p{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  line-height:1.9;
+  font-size:1.05rem;
+}
+
+/* HIGHLIGHTS */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.highlight{
+  background:rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  transition:0.4s;
+}
+
+.highlight:hover{
+  transform:translateY(-12px);
+  background:#4ade80;
+  color:#000;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.skill{
+  background:rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  transition:0.4s;
+}
+
+.skill:hover{
+  transform:scale(1.08);
+  background:#4ade80;
+  color:#000;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.project{
+  background:rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:18px;
+  transition:0.4s;
+}
+
+.project:hover{
+  transform:translateY(-10px);
+  background:rgba(74,222,128,0.9);
+  color:#000;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.contact a{
+  display:inline-block;
+  margin:10px;
+  text-decoration:none;
+  color:#4ade80;
+  font-weight:600;
+}
+
+.contact a:hover{
+  text-decoration:underline;
+}
+
+/* FOOTER */
+footer{
+  background:#020617;
+  text-align:center;
+  padding:15px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Beulah</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div>
+    <h1>Hello, I’m <span>Beulah</span></h1>
+    <p>BCA Student | Creative Thinker | Aspiring Web Developer</p>
+    <button onclick="scrollToSection()">Explore My Journey</button>
+  </div>
+</div>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    I am Beulah, a Bachelor of Computer Applications (BCA) student who enjoys blending
+    creativity with technology. I have a strong interest in web development, animations,
+    and user-friendly designs. I believe good communication and innovative thinking
+    are as important as technical skills, and I continuously strive to improve both.
+  </p>
+
+  <div class="highlights">
+    <div class="highlight">🎯 Strong Communication Skills</div>
+    <div class="highlight">🎨 Creative & Design-Oriented</div>
+    <div class="highlight">💡 Quick Learner</div>
+    <div class="highlight">🚀 Passion for Web Development</div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML & CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">C Programming</div>
+    <div class="skill">Python Basics</div>
+    <div class="skill">DBMS</div>
+    <div class="skill">Creative Thinking</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>Personal Portfolio Website</h3>
+      <p>Designed and developed using HTML, CSS and JavaScript with animations.</p>
+    </div>
+    <div class="project">
+      <h3>Student Record Management</h3>
+      <p>Academic project focusing on database concepts and logic building.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <p>Email: 25bcad13@kristujayanti.com</p>
+  <p>Location: India</p>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/beulah-s-4a2018379" target="_blank">
+    🔗 Visit My LinkedIn Profile
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 Beulah | BCA Digital Portfolio</p>
+</footer>
+
+<script>
+function scrollToSection(){
+  document.getElementById("about").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
