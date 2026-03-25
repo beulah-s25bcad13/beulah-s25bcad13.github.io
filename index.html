@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beulah S — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<div class="cursor-glow" id="cursor-glow"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">
+    <span class="brand-monogram">B</span>
+    <span>Beulah S</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#achievements">Awards</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="admin-btn" onclick="toggleAdmin()"><i class="fas fa-pen"></i> Edit</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-photo-wrap">
+      <div class="photo-ring-outer"></div>
+      <div class="photo-ring-inner"></div>
+      <img id="hero-photo" src="https://api.dicebear.com/7.x/personas/svg?seed=Beulah&backgroundColor=f2c4ce" alt="Beulah S" class="hero-photo"/>
+      <div class="photo-badge"><i class="fas fa-graduation-cap"></i></div>
+      <div class="photo-deco">🌸</div>
+    </div>
+    <div class="hero-text">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name" id="hero-name">Beulah S</h1>
+      <h2 class="hero-title" id="hero-title">BCA Computer Science Student</h2>
+      <p class="hero-subtitle" id="hero-college">Kristu Jayanti University &nbsp;·&nbsp; 2025–28</p>
+      <div class="hero-tags" id="hero-tags">
+        <span class="tag">Web Developer</span>
+        <span class="tag">Python Enthusiast</span>
+        <span class="tag">Leader</span>
+        <span class="tag">Book Lover</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Say Hello 🌸</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">01 — About</span>
+      <h2 class="section-title">Who I Am</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="about-bio" id="about-bio">I'm a first year Computer Science student at Kristu Jayanti University, passionate about coding and web development. I love bringing ideas to life through clean, functional code — and when I'm not at my keyboard, you'll find me diving into a good book or leading something exciting on campus.</p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num" id="stat-projects">5</span><span class="stat-label">Projects</span></div>
+          <div class="stat"><span class="stat-num" id="stat-gpa">1st</span><span class="stat-label">Year</span></div>
+          <div class="stat"><span class="stat-num" id="stat-awards">6+</span><span class="stat-label">Certs</span></div>
+        </div>
+      </div>
+      <div class="about-card">
+        <div class="info-row"><i class="fas fa-university"></i><span id="about-college-info">Kristu Jayanti University</span></div>
+        <div class="info-row"><i class="fas fa-map-marker-alt"></i><span id="about-location">Bengaluru, India</span></div>
+        <div class="info-row"><i class="fas fa-envelope"></i><span id="about-email">sbeulah14@gmail.com</span></div>
+        <div class="info-row"><i class="fas fa-phone"></i><span id="about-phone">+91 78711 39951</span></div>
+        <div class="info-row"><i class="fab fa-github"></i><span id="about-github">beulah-s25bcad13.github.io</span></div>
+        <div class="info-row"><i class="fab fa-linkedin"></i><span id="about-linkedin">linkedin.com/in/beulah-s4a2018379</span></div>
+        <a href="#" class="btn-primary" style="margin-top:1.5rem;display:inline-block;" id="resume-link">
+          Download Resume <i class="fas fa-download"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section section-alt" id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">02 — Skills</span>
+      <h2 class="section-title">What I Know</h2>
+    </div>
+    <div class="skills-grid" id="skills-grid"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">03 — Projects</span>
+      <h2 class="section-title">My Work</h2>
+    </div>
+    <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section section-alt" id="education">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">04 — Education</span>
+      <h2 class="section-title">My Journey</h2>
+    </div>
+    <div class="timeline" id="education-timeline"></div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="section" id="achievements">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">05 — Certifications & Awards</span>
+      <h2 class="section-title">Achievements</h2>
+    </div>
+    <div class="achievements-grid" id="achievements-grid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">06 — Contact</span>
+      <h2 class="section-title">Let's Connect</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>I'm always open to new opportunities, collaborations, and conversations. Fill the form and I'll receive your message directly in my inbox!</p>
+        <div class="social-links">
+          <a href="https://beulah-s25bcad13.github.io" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/beulah-s4a2018379" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:sbeulah14@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+917871139951" class="social-btn"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="contact-deco">
+          <span>🌸</span><span>✨</span><span>🌷</span>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form" onsubmit="handleContact(event)">
+        <div class="form-status" id="form-status"></div>
+        <input type="text" id="msg-name" placeholder="Your Name" required />
+        <input type="email" id="msg-email" placeholder="Your Email" required />
+        <textarea id="msg-message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn-primary" id="send-btn">
+          Send Message <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-monogram">B</div>
+    <p>Designed & Built by <strong>Beulah S</strong></p>
+    <p class="footer-sub">BCA Computer Science · Kristu Jayanti University · <span id="footer-year"></span></p>
+    <p class="footer-ci">🚀 Auto-deployed via GitHub Actions CI/CD</p>
+  </div>
+</footer>
+
+<!-- ADMIN OVERLAY -->
+<div class="admin-overlay" id="admin-overlay" onclick="closeAdmin()"></div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-panel" id="admin-panel">
+  <div class="admin-header">
+    <h3><i class="fas fa-pen-nib"></i> Edit Portfolio</h3>
+    <button onclick="closeAdmin()" class="close-btn"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="admin-tabs">
+    <button class="tab-btn active" onclick="showTab('profile',event)">Profile</button>
+    <button class="tab-btn" onclick="showTab('proj',event)">Projects</button>
+    <button class="tab-btn" onclick="showTab('skill',event)">Skills</button>
+    <button class="tab-btn" onclick="showTab('edu',event)">Education</button>
+    <button class="tab-btn" onclick="showTab('award',event)">Awards</button>
+  </div>
+
+  <!-- Profile -->
+  <div class="tab-content active" id="tab-profile">
+    <div class="form-group"><label>Full Name</label><input id="f-name"/></div>
+    <div class="form-group"><label>Title</label><input id="f-title"/></div>
+    <div class="form-group"><label>College & Year</label><input id="f-college"/></div>
+    <div class="form-group"><label>Bio</label><textarea id="f-bio" rows="3"></textarea></div>
+    <div class="form-group"><label>Location</label><input id="f-location"/></div>
+    <div class="form-group"><label>Email</label><input id="f-email"/></div>
+    <div class="form-group"><label>Phone</label><input id="f-phone"/></div>
+    <div class="form-group"><label>GitHub URL</label><input id="f-github"/></div>
+    <div class="form-group"><label>LinkedIn URL</label><input id="f-linkedin"/></div>
+    <div class="form-group"><label>Photo URL</label><input id="f-photo" placeholder="Paste any image URL"/></div>
+    <div class="form-group"><label>Tags (comma separated)</label><input id="f-tags"/></div>
+    <div class="form-group"><label>Projects Count</label><input id="f-stat-p" type="number"/></div>
+    <div class="form-group"><label>Year Label</label><input id="f-stat-g"/></div>
+    <div class="form-group"><label>Certs Count</label><input id="f-stat-a"/></div>
+    <button class="btn-primary" onclick="saveProfile()">💾 Save Profile</button>
+  </div>
+
+  <!-- Projects -->
+  <div class="tab-content" id="tab-proj">
+    <div class="form-group"><label>Title</label><input id="p-title" placeholder="Project name"/></div>
+    <div class="form-group"><label>Description</label><textarea id="p-desc" rows="2" placeholder="What does it do?"></textarea></div>
+    <div class="form-group"><label>Tech Stack (comma sep)</label><input id="p-tech" placeholder="HTML, CSS, JS"/></div>
+    <div class="form-group"><label>GitHub Link</label><input id="p-github" placeholder="https://github.com/..."/></div>
+    <div class="form-group"><label>Live Demo Link</label><input id="p-demo" placeholder="https://..."/></div>
+    <div class="form-group"><label>Icon (emoji)</label><input id="p-icon" placeholder="🌸"/></div>
+    <button class="btn-primary" onclick="addProject()">➕ Add Project</button>
+    <div id="projects-list" class="admin-list"></div>
+  </div>
+
+  <!-- Skills -->
+  <div class="tab-content" id="tab-skill">
+    <div class="form-group"><label>Skill Name</label><input id="s-name" placeholder="Python"/></div>
+    <div class="form-group"><label>Category</label>
+      <select id="s-cat">
+        <option>Languages</option>
+        <option>Web</option>
+        <option>Database</option>
+        <option>Tools</option>
+        <option>Soft Skills</option>
+      </select>
+    </div>
+    <div class="form-group"><label>Level: <span id="s-level-val">80</span>%</label>
+      <input id="s-level" type="range" min="1" max="100" value="80" oninput="document.getElementById('s-level-val').textContent=this.value"/>
+    </div>
+    <button class="btn-primary" onclick="addSkill()">➕ Add Skill</button>
+    <div id="skills-list" class="admin-list"></div>
+  </div>
+
+  <!-- Education -->
+  <div class="tab-content" id="tab-edu">
+    <div class="form-group"><label>Degree</label><input id="e-degree" placeholder="BCA Computer Science"/></div>
+    <div class="form-group"><label>Institution</label><input id="e-inst" placeholder="Kristu Jayanti University"/></div>
+    <div class="form-group"><label>Period</label><input id="e-period" placeholder="2025 – 2028"/></div>
+    <div class="form-group"><label>Description</label><textarea id="e-desc" rows="2" placeholder="Key courses, activities..."></textarea></div>
+    <button class="btn-primary" onclick="addEducation()">➕ Add Education</button>
+    <div id="edu-list" class="admin-list"></div>
+  </div>
+
+  <!-- Awards -->
+  <div class="tab-content" id="tab-award">
+    <div class="form-group"><label>Award / Cert Title</label><input id="a-title" placeholder="MongoDB Certification"/></div>
+    <div class="form-group"><label>Issuer</label><input id="a-issuer" placeholder="MongoDB University"/></div>
+    <div class="form-group"><label>Year</label><input id="a-year" placeholder="2025"/></div>
+    <div class="form-group"><label>Description</label><input id="a-desc" placeholder="Brief description"/></div>
+    <button class="btn-primary" onclick="addAchievement()">➕ Add Achievement</button>
+    <div id="awards-list" class="admin-list"></div>
+  </div>
+</div>
+
+<div class="notif" id="__notif"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
